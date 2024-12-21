@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eclipse - Artist Showcase</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        .nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: #000;
+            padding: 1rem;
+            z-index: 100;
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+
+        .nav-link:hover {
+            color: #ccc;
+        }
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(45deg, #000, #333);
+        }
+
+        .title {
+            color: white;
+            font-size: 4rem;
+            text-align: center;
+        }
+
+        .artists-container {
+            padding: 2rem;
+            background: #f5f5f5;
+        }
+
+        .artist-card {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .artist-name {
+            color: #333;
+            margin-bottom: 1rem;
+            font-size: 2rem;
+        }
+
+        .artist-info {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .artist-image {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .artist-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            object-fit: cover;
+        }
+
+        .artist-description {
+            flex: 2;
+            min-width: 300px;
+            font-size: 1.1rem;
+            color: #666;
+        }
+
+        @media (max-width: 768px) {
+            .title {
+                font-size: 3rem;
+            }
+
+            .artist-info {
+                flex-direction: column;
+            }
+
+            .artist-image, .artist-description {
+                min-width: 100%;
+            }
+
+            .artist-card {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="nav">
+        <a href="#" class="nav-link">Home</a>
+        <a href="#artists" class="nav-link">Artists</a>
+    </nav>
+
+    <section class="hero">
+        <h1 class="title">Eclipse</h1>
+    </section>
+
+    <section id="artists" class="artists-container">
+    
+        <section id="artists" class="artists-container">
+            <div class="artist-card">
+                <h2 class="artist-name">Nicki Minaj</h2>
+                <div class="artist-info">
+                    <div class="artist-image">
+                        <img src="https://th.bing.com/th/id/OIP.ReJBcG60fveDZxi-z9da_wHaEt?rs=1&pid=ImgDetMain"
+                            alt="Nicki Minaj">
+                    </div>
+                    <div class="artist-description">
+                        The Queen of Rap, Nicki Minaj has revolutionized hip-hop with her unique style, powerful lyrics, and
+                        iconic performances. Known for hits like "Super Bass" and "Anaconda," she continues to influence and
+                        inspire artists worldwide.
+                    </div>
+                </div>
+            </div>
+    
+            <div class="artist-card">
+                <h2 class="artist-name">Ice Spice</h2>
+                <div class="artist-info">
+                    <div class="artist-image">
+                        <img src="https://th.bing.com/th/id/OIP.0I0BUCCuhYnMZltcWQ-OuwHaEK?w=270&h=180&c=7&r=0&o=5&pid=1.7"
+                            alt="Ice Spice">
+                    </div>
+                    <div class="artist-description">
+                        Rising to fame with "Munch (Feelin' U)," Ice Spice has quickly become one of hip-hop's most exciting
+                        new voices. Her distinctive flow and New York drill sound have earned her widespread recognition and
+                        acclaim.
+                    </div>
+                </div>
+            </div>
+    
+            <div class="artist-card">
+                <h2 class="artist-name">Tyla</h2>
+                <div class="artist-info">
+                    <div class="artist-image">
+                        <img src="data:image/jpeg;base64,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"
+                            alt="Tyla">
+                    </div>
+                    <div class="artist-description">
+                        South African singer Tyla has captivated audiences with her blend of Amapiano and R&B. Her unique
+                        sound and dynamic performances showcase the evolving landscape of global pop music.
+                    </div>
+                </div>
+            </div>
+    
+            <div class="artist-card">
+                <h2 class="artist-name">Babymon</h2>
+                <div class="artist-info">
+                    <div class="artist-image">
+                        <img src="https://th.bing.com/th/id/OIP.r3DYaVIqLt2Jvu6tNHBFpwHaHV?w=188&h=186&c=7&r=0&o=5&pid=1.7"
+                            alt="Babymonster">
+                    </div>
+                    <div class="artist-description">
+                        YG Entertainment's newest girl group, Babymonster has made waves in the K-pop scene with their
+                        powerful performances and fresh take on the genre. Their debut has showcased their exceptional
+                        talent and potential.
+                    </div>
+                </div>
+            </div>
+            <div class="artist-card">
+                <h2 class="artist-name">Katseye</h2>
+                <div class="artist-info">
+                    <div class="artist-image">
+                        <img src="https://th.bing.com/th/id/OIP.47eiG3phGGUCGgZuVDa8qgHaEL?w=272&h=180&c=7&r=0&o=5&pid=1.7"
+                            alt="Katseye">
+                    </div>
+                    <div class="artist-description">
+                        An emerging force in the music industry, Katseye brings a fresh perspective to contemporary pop.
+                        Their unique sound and artistic vision set them apart in today's musical landscape.
+                    </div>
+                </div>
+            </div>
+            <div class="artist-card">
+                <h2 class="artist-name">Cardi B</h2>
+                <div class="artist-info">
+                    <div class="artist-image">
+                        <img src="https://th.bing.com/th/id/OIP.KEElVGE-DX9nwalOBFsKRgHaFS?w=277&h=199&c=7&r=0&o=5&pid=1.7"
+                            alt="Cardi B">
+                    </div>
+                    <div class="artist-description">
+    
+                        Cardi B, born Belcalis Marlenis Almánzar, is a Dominican-American rapper, singer, and songwriter
+                        known for her bold personality and powerful presence. She became a global sensation with her
+                        breakout hit "Bodak Yellow" and has continued to release chart-topping songs like "I Like It," "WAP"
+                        (with Megan Thee Stallion), and "Up."
+                    </div>
+                </div>
+            </div>
+            <div class="artist-card">
+                <h2 class="artist-name">Stray Kids (SKZ)</h2>
+                <div class="artist-info">
+                    <div class="artist-image">
+                        <img src="https://th.bing.com/th/id/OIP._S5x59SUMHcLX5WobxsGVAHaOS?w=195&h=372&c=7&r=0&o=5&pid=1.7"
+                            alt="Stray Kids">
+                    </div>
+                    <div class="artist-description">
+    
+                        Stray Kids (SKZ) is an 8-member K-pop group under JYP Entertainment, known for their self-produced
+                        music and powerful performances. With hits like "God's Menu" and "LALALA", they blend genres and
+                        showcase their unique style. Their fanbase, STAY, loves their energy, creativity, and authentic
+                        connection.
+                    </div>
+                </div>
+            </div>
+    
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+
+Hope you enjoy your new logo, here are the people that
+made your beautiful logo happen :)
+font name: IBMPlexSans-Thin
+font link: https://fonts.google.com/specimen/IBM+Plex+Sans
+font author: Mike Abbink
+font author site: https://www.mikeabbink.com/
+
+
+icon designer: iconfield
+icon designer link: /iconfield
+        
+{"bg":"#8F9EFF","icon":"#EFFF88","font":"#EFFF88","slogan":"#ffff9c"}
+      
